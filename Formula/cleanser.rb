@@ -12,6 +12,12 @@ class Cleanser < Formula
   license "MIT"
   head "https://github.com/phpfc/cleanser.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/phpfc/cleanser/releases/download/v0.1.1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "ca242d4d530414ae8a8b941036badd1531b42a18ae29010577566dd86976e4f2"
+  end
+
   depends_on "rust" => :build
 
   def install
