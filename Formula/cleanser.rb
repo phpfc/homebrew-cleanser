@@ -26,6 +26,6 @@ class Cleanser < Formula
 
   test do
     system "#{bin}/cleanser", "--version"
-    assert_match "cleanser 0.1.3")
+    assert_match "cleanser 0.1.3", shell_output("#{bin}/cleanser --version")
   end
 end
