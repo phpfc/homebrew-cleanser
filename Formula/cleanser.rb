@@ -7,13 +7,13 @@
 class Cleanser < Formula
   desc "Fast CLI tool for clearing macOS storage space"
   homepage "https://github.com/phpfc/cleanser"
-  url "https://github.com/phpfc/cleanser/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "bea6da45a8c69325beda3d856996cc0c8a67bab09f4e9530b8b15ce3cfac13de"
+  url "https://github.com/phpfc/cleanser/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "b3174b26917e76d1ec51c8a9d7641756dac642d7001997c75404b9176cd75539"
   license "MIT"
   head "https://github.com/phpfc/cleanser.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/phpfc/cleanser/releases/download/v0.1.3"
+    root_url "https://github.com/phpfc/cleanser/archive/refs/tags/v0.2.0.tar.gz"
     rebuild 3
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "a78ff32b460ed23c25ea39989e201de96833277b14cbbf92636a2d34fbdd9410"
   end
@@ -26,6 +26,6 @@ class Cleanser < Formula
 
   test do
     system "#{bin}/cleanser", "--version"
-    assert_match "cleanser 0.1.3", shell_output("#{bin}/cleanser --version")
+    assert_match "cleanser 0.2.0", shell_output("#{bin}/cleanser --version")
   end
 end
