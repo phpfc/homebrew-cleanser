@@ -13,9 +13,9 @@ class Cleanser < Formula
   head "https://github.com/phpfc/cleanser.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/phpfc/cleanser/archive/refs/tags/v0.5.2.tar.gz"
-    rebuild 16
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2b2b28f87067c43fdf0fdbf1e44cdceae559ce140e5b312c06082f99967041da"
+    root_url "https://github.com/phpfc/cleanser/releases/download/v0.5.2"
+    rebuild 17
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "127ac2f710b6d60a983dc7ec7f2c4def58ad48a1341b509f87d5531afb7bb9b2"
   end
 
   depends_on "rust" => :build
